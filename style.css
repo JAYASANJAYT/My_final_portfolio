@@ -528,6 +528,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ===== CERTIFICATIONS ===== */
+
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -539,8 +540,11 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--card-border);
   border-radius: 16px;
   padding: 1.8rem;
-  transition: all 0.3s;
   cursor: pointer;
+  transition: all 0.3s;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .cert-card:hover {
@@ -554,7 +558,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 1rem;
 }
 
-.cert-card h3 {
+.cert-name {
   font-size: 1rem;
   color: var(--text-bright);
   font-weight: 600;
@@ -577,14 +581,33 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 1rem;
 }
 
-.cert-badge.elite { background: rgba(234,179,8,0.15); color: #eab308; }
-.cert-badge.certified { background: rgba(34,197,94,0.15); color: #22c55e; }
-.cert-badge.gold { background: rgba(234,179,8,0.15); color: #eab308; }
+.cert-badge.elite {
+  background: rgba(234,179,8,0.15);
+  color: #eab308;
+}
+
+.cert-badge.certified {
+  background: rgba(34,197,94,0.15);
+  color: #22c55e;
+}
+
+.cert-badge.gold {
+  background: rgba(234,179,8,0.15);
+  color: #eab308;
+}
 
 .cert-link {
+  margin-top: auto;
+  padding-top: 1rem;
   font-size: 0.82rem;
+  font-weight: 500;
   color: var(--accent2);
+  text-decoration: none;
   cursor: pointer;
+}
+
+.cert-card:hover .cert-link {
+  text-decoration: underline;
 }
 
 /* ===== CONTACT ===== */
